@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <style>
+      #app {
+        font-family: Avenir, Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-align: center;
+        color: #2c3e50;
+        margin: 30px;
+        display: grid;
+        gap: 10px;
+        justify-items: center;
+      }
+      button {
+        background-color: #abc2f3; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        margin: 0px 3px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <button v-on:click="addOrder">Add Order</button>
+      <div v-for="order in orders">
+        Order {{ order._id }}
+        <button v-on:click="deleteOrder(order._id)">Complete</button>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module">
+      import Vue from "https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.esm.browser.js";
+
+      const backendUrl = "http://localhost:3000";
+
+      var client = axios.create({
+        baseURL: backendUrl,
+      });
+
+      var app = new Vue({
+        el: "#app",
+        data: {
+          orders: [],
+        },
+        mounted: function() {
+          this.loadOrder();
+        },
+        methods: {
+          loadOrder: async function () {
+            this.orders = (await client.get("/orders")).data;
+          },
+          addOrder: async function () {
+            await client.post("/orders");
+            this.loadOrder();
+          },
+          deleteOrder: async function (id) {
+            await client.delete("/orders/"+id);
+            this.loadOrder();
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
