@@ -30,6 +30,7 @@ You may use the following free resource for the deployment
 - https://www.mongodb.com/
 - https://www.heroku.com/
 - https://www.netlify.com/
+- https://vercel.com/
 
 ### Requirement
 Your deployment must meet the following criteria:
