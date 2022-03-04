@@ -25,6 +25,12 @@ Below is the information given by the development team
 - modify the variable `backendUrl` to the actual backend endpoint
 - serve the http server root from `frontend/`
 
+### Free Resource
+You may use the following free resource for the deployment
+- https://www.mongodb.com/
+- https://www.heroku.com/
+- https://www.netlify.com/
+
 ### Requirement
 Your deployment must meet the following criteria:
 - A working FE which reachable through internet
