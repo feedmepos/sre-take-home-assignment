@@ -1,4 +1,4 @@
-## FeedMe DevOps Engineer Take-Home Assignment
+## FeedMe SRE Engineer Take-Home Assignment
 Below is a take-home assignment before the interview for the position. You are required to
 1. Understand the situation and use case. You may contact the interviewer for further clarification.
 2. Develop and run your deployment plan for Environment, FE, BE using your most efficient tools.
