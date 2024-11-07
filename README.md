@@ -28,7 +28,6 @@ Below is the information given by the development team
 ### Free Resource
 You may use the following free resource for the deployment
 - https://www.mongodb.com/
-- https://www.heroku.com/
 - https://www.netlify.com/
 - https://vercel.com/
 
