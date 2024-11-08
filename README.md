@@ -28,15 +28,23 @@ Below is the information given by the development team
 ### Free Resource
 You may use the following free resource for the deployment
 - https://www.mongodb.com/
-- https://www.heroku.com/
 - https://www.netlify.com/
 - https://vercel.com/
 
-### Requirement
+### Mandatory Requirements
 Your deployment must meet the following criteria:
 - A working FE which reachable through internet
 - Monitoring and recovery for different resource
 - Documentation for the deployment plan
+
+### Evaluation Criterias
+
+You will be evaluated based a few criterias. The first one is the completion of the **Mandatory Requirements**.
+
+Other than that, please also draft a plan for the following circumstances (this part doesn't need to be implemented, just a draft plan is enough):
+- on-demand scaling of the resources
+- keeping the application secure and resilient against cyberattacks
+- recommended SLOs and SLIs for the service
 
 ### Tips on completing this assignment
 - Use the best tools you have on hand.
